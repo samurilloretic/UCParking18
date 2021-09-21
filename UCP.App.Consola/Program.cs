@@ -19,6 +19,7 @@ namespace UCP.App.Consola
             EncontrarProfesores();
             //EliminarProfesor(2);
             Console.WriteLine("se va a crear una nueva versión");
+            Console.WriteLine("Esto es una nueva versión desde el equipo de un compañero")
         }
 
         //CRUD

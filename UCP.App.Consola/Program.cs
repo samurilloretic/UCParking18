@@ -18,6 +18,7 @@ namespace UCP.App.Consola
             EncontrarProfesor(3);
             EncontrarProfesores();
             //EliminarProfesor(2);
+            Console.WriteLine("se va a crear una nueva versión");
         }
 
         //CRUD

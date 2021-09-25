@@ -1,0 +1,17 @@
+﻿@page
+@model UCP.APP.Frontend.Pages.ProfesoresModel
+@{
+}
+<h1>Lista de profesores</h1>
+<table>
+    @foreach (var profesor in Model.Profesores)
+    {
+        <tr>
+            <td>@profesor.nombre</td>
+            <td>@profesor.apellidos</td>
+            <td>@profesor.telefono</td>
+            <td>@profesor.facultad</td>
+            <td>@profesor.cubiculo</td>
+        </tr>
+    }
+</table>

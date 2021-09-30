@@ -11,11 +11,11 @@ namespace UCP.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //AdicionarProfesor();
+            AdicionarProfesor();
             //ActualizarProfesor(1);
             //EncontrarProfesor(1);
             //EncontrarProfesor(2);
-            EncontrarProfesor(3);
+            //EncontrarProfesor(3);
             EncontrarProfesores();
             //EliminarProfesor(2);
             
@@ -27,12 +27,12 @@ namespace UCP.App.Consola
         {
             var profesor = new Profesor
             {
-                nombre = "Natalia",
-                apellidos = "Segura",
+                nombre = "Santiago",
+                apellidos = "Murillo",
                 identificacion = 100002,
-                telefono = "30000000200",
-                correoElectronico = "nataliasegura.tic@ucaldas.edu.co",
-                condicionEspecial = "Embarazo",
+                telefono = "30000000100",
+                correoElectronico = "santiagomurillo.tic@ucaldas.edu.co",
+                condicionEspecial = "",
                 Vehiculo_1 = null,
                 Vehiculo_2 = null,
                 facultad = "Ingeniería",

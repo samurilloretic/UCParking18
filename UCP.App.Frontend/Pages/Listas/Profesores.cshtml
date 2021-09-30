@@ -3,15 +3,20 @@
 @{
 }
 <h1>Lista de profesores</h1>
-<table>
+<table class="table">
     @foreach (var profesor in Model.Profesores)
     {
         <tr>
+            <td>@profesor.id</td>
             <td>@profesor.nombre</td>
             <td>@profesor.apellidos</td>
             <td>@profesor.telefono</td>
             <td>@profesor.facultad</td>
-            <td>@profesor.cubiculo</td>
+            <td>@profesor.cubiculo</td>           
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-profesorid="@profesor.id">
+                <i class="fas fa-info-circle" aria-hidden="true"></i></a>
+            </td>
         </tr>
     }
 </table>

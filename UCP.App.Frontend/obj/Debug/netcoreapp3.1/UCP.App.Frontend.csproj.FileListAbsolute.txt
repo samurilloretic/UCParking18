@@ -80,3 +80,5 @@ C:\UCParking18\UCP.App\UCP.App.Frontend\obj\Debug\netcoreapp3.1\staticwebassets\
 C:\UCParking18\UCP.App\UCP.App.Frontend\obj\Debug\netcoreapp3.1\UCP.App.Frontend.dll
 C:\UCParking18\UCP.App\UCP.App.Frontend\obj\Debug\netcoreapp3.1\UCP.App.Frontend.pdb
 C:\UCParking18\UCP.App\UCP.App.Frontend\obj\Debug\netcoreapp3.1\UCP.App.Frontend.genruntimeconfig.cache
+C:\UCParking18\UCP.App\UCP.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Listas\Detalles.cshtml.g.cs
+C:\UCParking18\UCP.App\UCP.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Listas\Eliminar.cshtml.g.cs

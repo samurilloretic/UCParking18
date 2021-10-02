@@ -1,7 +1,7 @@
 using UCP.App.Dominio;
 using System.Collections.Generic;
 using System.Linq;
-
+using System;
 namespace UCP.App.Persistencia
 {
     public class RepositorioProfesor: IRepositorioProfesor
@@ -55,14 +55,14 @@ namespace UCP.App.Persistencia
             return profesorEncontrado;
         }
         //DeleteProfesor
-        bool IRepositorioProfesor.DeleteProfesor(int idProfesor)
+        Profesor IRepositorioProfesor.DeleteProfesor(Profesor profesor)
         {
-            var profesorEncontrado = _appContext.profesores.FirstOrDefault(p=>p.id==idProfesor);
+            var profesorEncontrado = _appContext.profesores.FirstOrDefault(p=>p.id==profesor.id);
             if (profesorEncontrado == null)
-                return false;
+                return null;
             _appContext.profesores.Remove(profesorEncontrado);
             _appContext.SaveChanges();
-            return true;
+            return profesorEncontrado;
         }
     }
 }

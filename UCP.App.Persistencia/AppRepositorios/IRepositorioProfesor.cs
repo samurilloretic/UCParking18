@@ -15,6 +15,6 @@ namespace UCP.App.Persistencia
         //UpdateProfesor
         Profesor UpdateProfesor(Profesor profesor);
         //DeleteProfesor
-        bool DeleteProfesor(int idProfesor);
+        Profesor DeleteProfesor(Profesor profesor);
     }
 }

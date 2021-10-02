@@ -17,10 +17,7 @@ namespace UCP.APP.Frontend.Pages
         public Profesor profesor{get;set;}
         public void OnGet()
         {
-
             Profesores = _repoProfesor.GetAllProfesores();
-            profesor = Profesores.ElementAt(1);
-            Console.WriteLine(profesor.id);
         }
     }
 }

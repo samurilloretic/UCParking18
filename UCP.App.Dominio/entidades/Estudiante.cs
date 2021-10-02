@@ -4,7 +4,7 @@ namespace UCP.App.Dominio
 {
     public class Estudiante : Persona
     {
-        public int id{get;set;}
+        //public int id{get;set;}
         
         public float tarifaEstudiante{get;set;}
 

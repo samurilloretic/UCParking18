@@ -5,7 +5,7 @@ namespace UCP.App.Dominio
 {
     public class Visitante:Persona
     {
-        public int id{get;set;}
+        //public int id{get;set;}
         
         public float tarifaVisitante{get;set;}
 

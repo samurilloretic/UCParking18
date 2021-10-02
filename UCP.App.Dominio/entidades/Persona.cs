@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Resources;
 
 namespace UCP.App.Dominio
 
@@ -12,6 +14,8 @@ namespace UCP.App.Dominio
 
         public string apellidos{get;set;}
 
+        [Required]
+        [Range(0,1090000000)]
         public int identificacion{get;set;}
 
         public string telefono{get; set;}

@@ -16,5 +16,5 @@ namespace UCP.App.Dominio
         public TipoVehiculo tipoVehiculo{get;set;}
 
     }
-
+    
 }

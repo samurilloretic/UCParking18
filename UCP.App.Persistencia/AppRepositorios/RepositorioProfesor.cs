@@ -61,6 +61,7 @@ namespace UCP.App.Persistencia
             if (profesorEncontrado == null)
                 return null;
             _appContext.profesores.Remove(profesorEncontrado);
+            Console.WriteLine("Se eliminó un profesor");
             _appContext.SaveChanges();
             return profesorEncontrado;
         }

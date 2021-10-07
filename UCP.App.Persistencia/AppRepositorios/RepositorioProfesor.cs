@@ -69,12 +69,13 @@ namespace UCP.App.Persistencia
 
         Profesor IRepositorioProfesor.GetProfesorPorCarro(int idProfesor)
         {
-            Profesor profesorEncontrado = _appContext.profesores.FirstOrDefault(p => p.id == idProfesor);
+            //Profesor profesorEncontrado = _appContext.profesores.FirstOrDefault(p => p.id == idProfesor);
             //Profesor profesorEncontrado = _appContext.profesores.Include("Vehiculo_1").FirstOrDefault(p => p.id == idProfesor);
             //List<Profesor> profesores = _appContext.profesores.Include(p=>p.Vehiculo_1).ToList();
             //Console.WriteLine(profesores[0].Vehiculo_1.marca);
-            var profesoresEncontrados = _appContext.profesores.Include(profesor => profesor.Vehiculo_1).ToList();
-            foreach (var profesor in profesoresEncontrados)
+            //var profesoresEncontrados = _appContext.profesores.Include(profesor => profesor.Vehiculo_1).Include(profesor => profesor.Vehiculo_2).ToList();
+            var profesorEncontrado = _appContext.profesores.Include(profesor => profesor.Vehiculo_1).Include(profesor => profesor.Vehiculo_2).FirstOrDefault(profesor => profesor.id == idProfesor);
+            /*foreach (var profesor in profesoresEncontrados)
             {
                 if(profesor.id ==idProfesor)
                     return profesor;
@@ -87,10 +88,10 @@ namespace UCP.App.Persistencia
                     Console.WriteLine(_appContext.vehiculos.FirstOrDefault(v=>v.id==profesor.Vehiculo_1.id).tipoVehiculo);
 
                     Console.WriteLine(profesor.nombre);
-                    */
+                    
                     
                 }
-            }
+            }*/
             //var vehiculo = _appContext.Entry(profesorEncontrado).Collection(b=>b.Vehiculo_1).Query().ToList();
             //Vehiculo vehiculo = _appContext.profesores.Include(p=>p.Vehiculo_1);
             //Console.WriteLine(vehiculo.marca);

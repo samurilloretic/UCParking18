@@ -16,5 +16,7 @@ namespace UCP.App.Persistencia
         Profesor UpdateProfesor(Profesor profesor);
         //DeleteProfesor
         Profesor DeleteProfesor(Profesor profesor);
+
+        Profesor GetProfesorPorCarro(int idcarro);
     }
 }

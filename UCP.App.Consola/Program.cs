@@ -14,7 +14,7 @@ namespace UCP.App.Consola
         private static IRepositorioParqueadero _repoParqueadero = new RepositorioParqueadero(new Persistencia.AppContext());
         static void Main(string[] args)
         {
-            Persona persona_1 = EncontrarProfesor(8);
+            /*Persona persona_1 = EncontrarProfesor(8);
             Persona persona_2 = EncontrarProfesor(9);
             List<Persona> personas = new List<Persona>();
             personas.Add(persona_1);
@@ -23,7 +23,17 @@ namespace UCP.App.Consola
             if (parqueadero!=null)
             {
                 Console.WriteLine("Se creó un parqueadero");
-            }
+            }*/
+
+            Profesor profesor = _repoProfesor.GetProfesorPorCarro(15);
+            //Profesor profesor = EncontrarProfesor(15);
+            Console.WriteLine(profesor.nombre);
+            Console.WriteLine(profesor.Vehiculo_2.marca);
+            Console.WriteLine(profesor.Vehiculo_2.modelo);
+            Console.WriteLine(profesor.Vehiculo_2.placa);
+            Console.WriteLine(profesor.Vehiculo_2.tipoVehiculo);
+
+            
            
         }
 

@@ -1,4 +1,3 @@
-C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.csprojAssemblyReference.cache
 C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.AssemblyInfoInputs.cache
 C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.AssemblyInfo.cs
 C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.csproj.CoreCompileInputs.cache
@@ -7,3 +6,5 @@ C:\UCParking18\UCP.App\UCP.App.Dominio\bin\Debug\netstandard2.0\UCP.App.Dominio.
 C:\UCParking18\UCP.App\UCP.App.Dominio\bin\Debug\netstandard2.0\UCP.App.Dominio.pdb
 C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.dll
 C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.pdb
+C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.csproj.AssemblyReference.cache
+C:\UCParking18\UCP.App\UCP.App.Dominio\obj\Debug\netstandard2.0\UCP.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig

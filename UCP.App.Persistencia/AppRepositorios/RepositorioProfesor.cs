@@ -99,5 +99,7 @@ namespace UCP.App.Persistencia
             //_appContext.Entry(profesorEncontrado).Reference(s=>s.Vehiculo_1).Load();
             return profesorEncontrado;
         }
+
+
     }
 }

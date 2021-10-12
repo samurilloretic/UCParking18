@@ -44,12 +44,49 @@ namespace UCP.App.Consola
 
             //Puesto puestonuevo = new Puesto{numero=3,estado=Estado.libre,tipoVehiculo=TipoVehiculo.Bicicleta};
             //AdicionarInformacionParqueadero(4,puestonuevo);
-
+            /*
             Profesor nuevoProfesor = AdicionarProfesor();
             Puesto puestonuevo = new Puesto{numero=4,estado=Estado.libre,tipoVehiculo=TipoVehiculo.Bicicleta};
             Vehiculo nuevoVehiculo = new Vehiculo{marca="Toyota",modelo="Prado",placa="DKS999",tipoVehiculo=TipoVehiculo.Automovil};
             Transaccion transaccion = new Transaccion{horaIngreso=new DateTime(2021,10,8),horaSalida=new DateTime(2021,10,9),vehiculo=nuevoVehiculo,persona=nuevoProfesor};
             AdicionarInformacionParqueadero(4,puestonuevo,transaccion,nuevoProfesor);           
+
+            */
+            /*
+            Console.WriteLine("Busqueda según estado puesto");
+            IEnumerable<Parqueadero> parqueaderos = _repoParqueadero.ParqueaderoConPuesto(Estado.reservado);
+            foreach (var parqueadero in parqueaderos)
+            {
+                Console.WriteLine(parqueadero.direccion);
+            }
+            Console.WriteLine("Busqueda según tipoVehiculo puesto");
+            IEnumerable<Parqueadero> parqueaderosTV = _repoParqueadero.ParqueaderoConPuesto(TipoVehiculo.Automovil);
+            foreach (var parqueadero in parqueaderosTV)
+            {
+                Console.WriteLine(parqueadero.direccion);
+            }
+
+            Console.WriteLine("Busqueda según tipoVehiculo y estado puesto");
+            IEnumerable<Parqueadero> parqueaderosETV = _repoParqueadero.ParqueaderoConPuesto(Estado.libre,TipoVehiculo.Camionetas);
+            foreach (var parqueadero in parqueaderosETV)
+            {
+                Console.WriteLine(parqueadero.direccion);
+            }*/
+
+            foreach (TipoVehiculo tv in Enum.GetValues(typeof(TipoVehiculo)))
+            {
+                Console.WriteLine(tv);
+                IEnumerable<Parqueadero> parqueaderoConsultadoTV=_repoParqueadero.ParqueaderoConPuesto(tv);
+                foreach (var parqueadero in parqueaderoConsultadoTV)
+                {
+                    Console.WriteLine(parqueadero.direccion);
+                    foreach (var puesto in parqueadero.puestos)
+                    {
+                        if(puesto.tipoVehiculo==tv)
+                            Console.WriteLine(puesto.numero);
+                    }
+                }
+            }
         }
 
         //CRUD

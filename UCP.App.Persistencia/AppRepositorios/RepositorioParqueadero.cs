@@ -2,6 +2,7 @@ using UCP.App.Dominio;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Microsoft.EntityFrameworkCore;
 namespace UCP.App.Persistencia
 {
     public class RepositorioParqueadero: IRepositorioParqueadero
@@ -61,6 +62,21 @@ namespace UCP.App.Persistencia
             Console.WriteLine("Se eliminó un profesor");
             _appContext.SaveChanges();
             return parqueaderoEncontrado;
+        }
+
+        IEnumerable<Parqueadero> IRepositorioParqueadero.ParqueaderoConPuesto(Estado estado)
+        {
+            return _appContext.parqueaderos.Include(p=>p.puestos).Where(p=> p.puestos.Any(s=>estado==s.estado));
+        }
+
+        IEnumerable<Parqueadero> IRepositorioParqueadero.ParqueaderoConPuesto(TipoVehiculo tipoVehiculo)
+        {
+            return _appContext.parqueaderos.Include(p=>p.puestos).Where(p=> p.puestos.Any(s=>tipoVehiculo==s.tipoVehiculo));
+        }
+
+        IEnumerable<Parqueadero> IRepositorioParqueadero.ParqueaderoConPuesto(Estado estado,TipoVehiculo tipoVehiculo)
+        {
+            return _appContext.parqueaderos.Include(p=>p.puestos).Where(p=> p.puestos.Any(s=>estado==s.estado && s.tipoVehiculo == tipoVehiculo && s.numero<=1));
         }
     }
 }

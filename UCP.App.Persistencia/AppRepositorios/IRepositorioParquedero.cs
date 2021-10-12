@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using UCP.App.Dominio;
 
 namespace UCP.App.Persistencia
@@ -16,5 +17,9 @@ namespace UCP.App.Persistencia
         Parqueadero UpdateParqueadero(Parqueadero parqueadero);
         //DeleteProfesor
         Parqueadero DeleteParqueadero(Parqueadero parqueadero);
+
+        IEnumerable<Parqueadero> ParqueaderoConPuesto(Estado estado);
+        IEnumerable<Parqueadero> ParqueaderoConPuesto(TipoVehiculo tipoVehiculo);
+        IEnumerable<Parqueadero> ParqueaderoConPuesto(Estado estado,TipoVehiculo tipoVehiculo);
     }
 }
